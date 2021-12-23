@@ -1,0 +1,85 @@
+final_model_trainer:DEBUG 2021-12-23 20:22:50,949 -  Starting Class
+final_model_trainer:DEBUG 2021-12-23 20:22:50,953 -  Current train.head()
+   numchilds  meaneduc  overcrowding  isprecarious  Target  walltype  wallquality  floortype  floorqual  roofqual  region  dependency  headescolari  sumelectronics
+0          0     10.00          1.00             0       4         6            2          5          1         1       1        0.00            10            1.00
+1          0     12.00          1.00             0       4         4            2          4          2         2       1       10.00            12            2.00
+2          0     11.00          0.50             0       4         4            2          5          3         3       1       10.00            11            0.00
+5          1     11.00          1.30             0       4         6            3          5          3         3       1        1.00            11            4.00
+8          2     10.00          4.00             0       4         6            1          5          2         1       1        1.00             9            1.00
+final_model_trainer:DEBUG 2021-12-23 20:22:50,958 -  Current train.info()
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 2973 entries, 0 to 9552
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   numchilds       2973 non-null   int64  
+ 1   meaneduc        2973 non-null   float64
+ 2   overcrowding    2973 non-null   float64
+ 3   isprecarious    2973 non-null   int64  
+ 4   Target          2973 non-null   int64  
+ 5   walltype        2973 non-null   int64  
+ 6   wallquality     2973 non-null   int64  
+ 7   floortype       2973 non-null   int64  
+ 8   floorqual       2973 non-null   int64  
+ 9   roofqual        2973 non-null   int64  
+ 10  region          2973 non-null   int64  
+ 11  dependency      2973 non-null   float64
+ 12  headescolari    2973 non-null   int64  
+ 13  sumelectronics  2973 non-null   float64
+dtypes: float64(4), int64(10)
+memory usage: 348.4 KB
+
+final_model_trainer:DEBUG 2021-12-23 20:22:50,980 -  Current train.describe()
+       numchilds  meaneduc  overcrowding  isprecarious   Target  walltype  wallquality  floortype  floorqual  roofqual   region  dependency  headescolari  sumelectronics
+count   2,973.00  2,973.00      2,973.00      2,973.00 2,973.00  2,973.00     2,973.00   2,973.00   2,973.00  2,973.00 2,973.00    2,973.00      2,973.00        2,973.00
+mean        0.53      9.14          1.38          0.02     3.36      5.26         2.49       4.45       2.56      2.46     2.23        1.45          8.15            2.81
+std         0.86      4.40          0.75          0.12     0.99      1.11         0.67       0.92       0.66      0.72     1.73        2.67          4.52            1.75
+min         0.00      0.00          0.20          0.00     1.00      1.00         1.00       1.00       1.00      1.00     1.00        0.00          0.00            0.00
+25%         0.00      6.00          1.00          0.00     3.00      5.00         2.00       4.00       2.00      2.00     1.00        0.00          6.00            2.00
+50%         0.00      8.67          1.30          0.00     4.00      6.00         3.00       5.00       3.00      3.00     1.00        0.50          7.00            2.00
+75%         1.00     12.00          1.70          0.00     4.00      6.00         3.00       5.00       3.00      3.00     4.00        1.00         11.00            4.00
+max         7.00     37.00          6.00          1.00     4.00      6.00         3.00       5.00       3.00      3.00     6.00       10.00         21.00           14.00
+final_model_trainer:DEBUG 2021-12-23 20:22:50,982 -  Current test.head()
+   numchilds  meaneduc  overcrowding  isprecarious  walltype  wallquality  floortype  floorqual  roofqual  region  dependency  headescolari  sumelectronics
+2          1     16.50          1.50             0         6            3          5          3         3       1        0.50            17            3.00
+3          0     16.00          1.00             0         6            3          5          3         3       1        0.00            16            4.00
+4          0      0.00          0.50             0         6            2          5          3         3       1       10.00            11            2.00
+6          0     13.50          1.00             0         6            2          4          3         2       1        0.00            11            3.00
+8          0     14.00          0.50             0         6            3          5          3         3       1        0.00            14            3.00
+final_model_trainer:DEBUG 2021-12-23 20:22:50,986 -  Current test.info()
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 7334 entries, 2 to 23852
+Data columns (total 13 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   numchilds       7334 non-null   int64  
+ 1   meaneduc        7334 non-null   float64
+ 2   overcrowding    7334 non-null   float64
+ 3   isprecarious    7334 non-null   int64  
+ 4   walltype        7334 non-null   int64  
+ 5   wallquality     7334 non-null   int64  
+ 6   floortype       7334 non-null   int64  
+ 7   floorqual       7334 non-null   int64  
+ 8   roofqual        7334 non-null   int64  
+ 9   region          7334 non-null   int64  
+ 10  dependency      7334 non-null   float64
+ 11  headescolari    7334 non-null   int64  
+ 12  sumelectronics  7334 non-null   float64
+dtypes: float64(4), int64(9)
+memory usage: 802.2 KB
+
+final_model_trainer:DEBUG 2021-12-23 20:22:51,005 -  Current test.describe()
+       numchilds  meaneduc  overcrowding  isprecarious  walltype  wallquality  floortype  floorqual  roofqual   region  dependency  headescolari  sumelectronics
+count   7,334.00  7,334.00      7,334.00      7,334.00  7,334.00     7,334.00   7,334.00   7,334.00  7,334.00 7,334.00    7,334.00      7,334.00        7,334.00
+mean        0.54      9.02          1.40          0.02      5.25         2.47       4.44       2.54      2.46     2.27        1.53          8.08            2.83
+std         0.88      4.30          0.81          0.13      1.11         0.68       0.92       0.67      0.70     1.74        2.77          4.51            1.76
+min         0.00      0.00          0.10          0.00      1.00         1.00       1.00       1.00      1.00     1.00        0.00          0.00            0.00
+25%         0.00      6.00          1.00          0.00      5.00         2.00       4.00       2.00      2.00     1.00        0.00          6.00            2.00
+50%         0.00      8.50          1.30          0.00      6.00         3.00       5.00       3.00      3.00     1.00        0.50          6.00            2.00
+75%         1.00     11.67          1.70          0.00      6.00         3.00       5.00       3.00      3.00     4.00        1.00         11.00            4.00
+max         9.00     36.00         13.00          1.00      6.00         3.00       5.00       3.00      3.00     6.00       10.00         21.00           13.00
+final_model_trainer:DEBUG 2021-12-23 20:22:51,005 -  Creating X and y dataframes
+final_model_trainer:DEBUG 2021-12-23 20:22:51,006 -  Creating train test split
+final_model_trainer:DEBUG 2021-12-23 20:22:51,009 -  Training model
+final_model_trainer:DEBUG 2021-12-23 20:22:51,272 -  Predicting test df
+final_model_trainer:DEBUG 2021-12-23 20:23:06,849 -  Closing Class
